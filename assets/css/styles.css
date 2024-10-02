@@ -11,6 +11,7 @@ body {
     font-family: "Open Sans", sans-serif;
 }
 
+/* Common */
 /* Những cái này sẽ có font mặc định, nên nó không kế thừa lại, ta phải cho nó kế thừa lại từ body  */
 input,
 textarea,
@@ -27,4 +28,92 @@ h4,
 h5,
 h6 {
     font-family: "Open Sans", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 1170px;
+    max-width: calc(100%-48px);
+    margin: 0 auto;
+}
+
+.btn--small {
+    display: inline-flex;
+    min-width: 113px;
+    height: 52px;
+    border-radius: 6px;
+    background: #212832;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.75;
+}
+
+/* Header */
+.header {
+    padding: 54px 0;
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+}
+
+.navbar {
+    margin-left: 46px;
+}
+
+.navbar__list {
+    display: flex;
+}
+
+.navbar__link {
+    padding: 8px 24px;
+    color: #696d76;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+/* Thay đổi font-weight sẽ làm bị giật -> dùng text-shadow */
+.navbar__link:hover,
+.navbar__link--active {
+    color: #212832;
+    text-shadow: 1px 0 0 currentColor;
+    /* font-weight: 600; */
+}
+
+.navbar__link--active {
+    position: relative;
+}
+
+.navbar__link--active::after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    width: 47px;
+    height: 1px;
+    left: 24px;
+    bottom: 0;
+    border-radius: 0.5px;
+    background: #7264d6;
+}
+
+.header-action {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.header-action__link {
+    margin-right: 28px;
+    color: #212832;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 28px;
 }
