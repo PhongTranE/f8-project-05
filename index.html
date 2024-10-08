@@ -96,42 +96,120 @@
             <div class="container">
                 <div class="header__inner">
                     <!-- Logo -->
-                    <img
-                        src="./assets/icons/Logo.svg"
-                        alt="CeloBank"
-                        class="logo"
-                    />
+                    <figure class="logo">
+                        <a href="/">
+                            <img src="./assets/icons/Logo.svg" alt="CeloBank" />
+                        </a>
+                    </figure>
                     <!-- Navbar -->
                     <nav class="navbar">
                         <!-- Navbar list -->
                         <ul class="navbar__list">
                             <li class="navbar__item">
                                 <a
-                                    href="#!"
+                                    href="#"
                                     class="navbar__link navbar__link--active"
-                                    >Home</a
+                                >
+                                    Home
+                                </a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="#products" class="navbar__link"
+                                    >Products</a
                                 >
                             </li>
                             <li class="navbar__item">
-                                <a href="#!" class="navbar__link">Products</a>
+                                <a href="#features" class="navbar__link"
+                                    >Features</a
+                                >
                             </li>
                             <li class="navbar__item">
-                                <a href="#!" class="navbar__link">Features</a>
-                            </li>
-                            <li class="navbar__item">
-                                <a href="#!" class="navbar__link">Blog</a>
+                                <a href="#blog" class="navbar__link">Blog</a>
                             </li>
                         </ul>
                     </nav>
                     <!-- Header action -->
                     <div class="header-action">
-                        <a href="#!" class="header-action__link">Log in</a>
-                        <a href="#!" class="btn--small header-action__btn">
-                            Sign up
-                        </a>
+                        <a href="#!" class="header__btn login">Log in</a>
+                        <a href="#!" class="btn header__btn">Sign up</a>
                     </div>
                 </div>
             </div>
         </header>
+        <!-- Hero -->
+        <section id="hero" class="hero">
+            <div class="container">
+                <div class="hero__inner">
+                    <!-- Hero content -->
+                    <section class="hero__content">
+                        <p class="section-desc-title">Digital Smart Wallet</p>
+                        <h1 class="hero__heading">
+                            Digital <strong>Payment</strong> For Everyone.
+                        </h1>
+                        <p class="section-desc-level-1 hero__desc">
+                            We bring together eveything that’s required to build
+                            websites and apps that accept payments and send
+                            payouts globally. We are the best platform.
+                        </p>
+                        <form action="" class="hero__mail">
+                            <input
+                                type="email"
+                                name="email"
+                                id="email"
+                                placeholder="Your email address"
+                                class="hero__mail-input"
+                                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$"
+                                required
+                            />
+                            <button type="submit" class="btn hero__mail-btn">
+                                Get Started
+                            </button>
+                            <p class="hero__mail-error">*Enter your email</p>
+                        </form>
+                        <p class="section-desc-level-3 hero__desc-level-3">
+                            *We’ll respect the inbox and never share your email.
+                        </p>
+                    </section>
+                    <!-- Hero media -->
+                    <div class="hero__media">
+                        <figure class="hero__images">
+                            <img
+                                src="./assets/img/Mobile Screen.png"
+                                alt="Mobile"
+                                class="hero__img"
+                            />
+                        </figure>
+
+                        <div class="deposite">
+                            <img
+                                src="./assets/img/Deposite.svg"
+                                alt="deposite"
+                            />
+                            <div class="deposite__strong">Deposite</div>
+                            <p class="deposite__money">$32000</p>
+                        </div>
+
+                        <div class="interest">
+                            <div class="interest__percent">0%</div>
+                            <p class="interest__text">Interest</p>
+                        </div>
+
+                        <div class="secured">
+                            <figure>
+                                <img
+                                    src="./assets/img/SECURED.svg"
+                                    alt="secured"
+                                    class="secured__img"
+                                />
+                            </figure>
+                            <div class="secured__text">
+                                <div class="secured__money">$1.310</div>
+                                <p class="secured__desc">SECURED FUNDS</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </body>
 </html>

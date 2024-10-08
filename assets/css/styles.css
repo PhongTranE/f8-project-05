@@ -4,6 +4,7 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -40,23 +41,76 @@ a {
     margin: 0 auto;
 }
 
-.btn--small {
-    display: inline-flex;
-    min-width: 113px;
-    height: 52px;
-    border-radius: 6px;
-    background: #212832;
+.btn {
     color: #fff;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.6rem;
+    text-align: center;
     font-weight: 600;
     line-height: 1.75;
+    padding: 12px 28px;
+    background: #212832;
+    border-radius: 6px;
+    display: inline-block;
+    transition: opacity 0.25s ease-out;
+    max-width: 113px;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.section-heading {
+    color: #212832;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.section-desc-title {
+    padding-left: 30px;
+    margin-left: 5px;
+    position: relative;
+    color: #696d77;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+.section-desc-title::before {
+    content: "";
+    display: block;
+    position: absolute;
+    flex-shrink: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 18px;
+    height: 2px;
+    background: #696d77;
+}
+
+.section-desc-level-1 {
+    color: #696d76;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.67;
+}
+
+.section-desc-level-3 {
+    color: #696d76;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.71;
 }
 
 /* Header */
 .header {
-    padding: 54px 0;
+    margin-top: 10px;
+    padding: 8px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: 100;
 }
 
 .header__inner {
@@ -84,15 +138,21 @@ a {
 .navbar__link:hover,
 .navbar__link--active {
     color: #212832;
-    text-shadow: 1px 0 0 currentColor;
-    /* font-weight: 600; */
+    font-weight: 600;
+    text-shadow: 1px 0 0 0 currentColor;
+    text-decoration: underline;
+    text-underline-offset: 7px;
+    text-decoration-color: #7264d6; /* Đổi màu underline */
+    text-decoration-thickness: 2px; /* Độ dày của underline */
 }
 
 .navbar__link--active {
-    position: relative;
+    color: #212832;
+    font-weight: 600;
+    text-shadow: 1px 0 0 0 currentColor;
 }
 
-.navbar__link--active::after {
+/* .navbar__link--active::after {
     position: absolute;
     content: "";
     display: inline-block;
@@ -102,18 +162,217 @@ a {
     bottom: 0;
     border-radius: 0.5px;
     background: #7264d6;
-}
-
+} */
 .header-action {
-    margin-left: auto;
+    margin-left: 406px;
     display: flex;
     align-items: center;
 }
 
-.header-action__link {
-    margin-right: 28px;
+.login {
     color: #212832;
-    font-size: 1.6rem;
+    display: inline-block;
+    padding: 8px 24px;
+    margin-right: 4px;
+}
+
+.header__button {
+    justify-self: flex-end;
+    margin-left: auto;
+    white-space: nowrap;
+}
+
+/* Hero */
+
+.hero {
+    margin-top: 76px;
+}
+
+.hero__inner {
+    display: flex;
+    align-items: center;
+}
+
+.hero__content {
+    padding: 57px 0;
+    width: 47%;
+}
+
+.hero__heading {
+    margin-top: 12px;
+    width: 500px;
+    color: #212832;
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.17;
+}
+
+.hero__heading strong {
+    color: #7264d6;
+}
+
+.hero__desc {
+    margin-top: 20px;
+    width: 540px;
+}
+
+.hero__mail {
+    margin-top: 40px;
+    position: relative;
+}
+
+.hero__desc-level-3 {
+    margin-top: 20px;
+}
+
+.hero__mail {
+    padding: 8px 8px 8px 23px;
+    background-color: #fff;
+    box-shadow: 0px 16px 42px 0px rgba(0, 0, 0, 0.07);
+    display: flex;
+    border-radius: 8px;
+}
+
+.hero__mail-input {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 20px;
+}
+
+.hero__mail-btn {
+    padding: 15px 30px;
+    background: #7264d6;
+    max-width: 149px;
+    white-space: nowrap;
+    margin-left: auto;
+    border: none;
+    cursor: pointer;
+}
+
+.hero__mail-error {
+    position: absolute;
+    left: 5px;
+    bottom: -20px;
+    color: #ff0000;
+    font-size: 1.2rem;
+    font-style: italic;
+    visibility: hidden;
+}
+
+.hero__mail:has(input:invalid:not(:placeholder-shown)) .hero__mail-error {
+    visibility: visible;
+}
+
+/* Hero media */
+.hero__media {
+    position: relative;
+    width: 100%;
+}
+
+.hero__img {
+    width: 296px;
+    flex-shrink: 0;
+    margin-left: 160px;
+}
+
+.deposite {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    padding: 14px 10px;
+    top: 113px;
+    left: 60px;
+    width: 174px;
+    height: 46px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.07);
+}
+
+.deposite img {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+.deposite__strong {
+    margin-left: 8px;
+    color: #31456a;
+    font-size: 1.4rem;
     font-weight: 600;
-    line-height: 28px;
+    line-height: 1;
+}
+
+.deposite__money {
+    margin-left: 19px;
+    color: #4ab5e3;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.interest {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    top: 127px;
+    width: 130px;
+    height: 130px;
+    flex-shrink: 0;
+    background: #da6464;
+    border-radius: 50%;
+}
+
+.interest__percent {
+    color: #fff;
+    font-size: 4.4rem;
+    font-weight: 600;
+}
+
+.interest__text {
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.secured {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0 20px 14px;
+    width: 124px;
+    height: 68px;
+    flex-shrink: 0;
+    bottom: 61px;
+    right: 100px;
+    border-radius: 10px;
+    background: #439f90;
+}
+
+.secured__img {
+    width: 20px;
+    height: 26px;
+    flex-shrink: 0;
+}
+
+.secured__money {
+    color: #fff;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.secured__desc {
+    margin-top: 5px;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 400;
+    line-height: 1;
 }
