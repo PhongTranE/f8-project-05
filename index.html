@@ -89,6 +89,12 @@
 
         <!-- Styles CSS -->
         <link rel="stylesheet" href="./assets/css/styles.css" />
+
+        <!-- Animation -->
+        <link
+            href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+            rel="stylesheet"
+        />
     </head>
     <body style="height: 10000px">
         <!-- Header -->
@@ -321,38 +327,198 @@
                             </p>
                             <ul class="payment__list">
                                 <li class="payment__item">Global Payments</li>
-                                <li class="payment__item">One-Click Purchase</li>
+                                <li class="payment__item">
+                                    One-Click Purchase
+                                </li>
                                 <li class="payment__item">Friendly Price</li>
                             </ul>
                             <button class="btn payment-cta">Get started</button>
                         </div>
                         <!-- Payment media -->
-                         <figure class="payment__media">
-                            <img src="./assets/img/card.png" alt="Card" class="payment__img">
+                        <figure class="payment__media">
+                            <img
+                                src="./assets/img/card.png"
+                                alt="Card"
+                                class="payment__img"
+                            />
                             <div class="send_money">
                                 <div class="icon-wrap">
-                                    <img src="./assets/img/send_money.svg" alt="Send Money" class="send_money__icon">
+                                    <img
+                                        src="./assets/img/send_money.svg"
+                                        alt="Send Money"
+                                        class="send_money__icon"
+                                    />
                                 </div>
                                 <div class="send_money__content">
                                     <div class="send_money__text">
-                                        <p class="send_money__text-bold">Send Money</p>
-                                        <p class="send_money__text-desc">Airbnb Payment</p>
+                                        <p class="send_money__text-bold">
+                                            Send Money
+                                        </p>
+                                        <p class="send_money__text-desc">
+                                            Airbnb Payment
+                                        </p>
                                     </div>
                                     <div class="send_money__num">
-                                        <span class="send_money__num-bold">- $600</span>
-                                        <span class="send_money__num-date">Sep 23</span>
+                                        <span class="send_money__num-bold"
+                                            >- $600</span
+                                        >
+                                        <span class="send_money__num-date"
+                                            >Sep 23</span
+                                        >
                                     </div>
                                 </div>
                             </div>
                             <div class="income">
-                                <img src="./assets/img/income.svg" alt="" class="income__icon">
+                                <img
+                                    src="./assets/img/income.svg"
+                                    alt=""
+                                    class="income__icon"
+                                />
                                 <span class="income__content">Income</span>
                                 <span class="income__number">$1250</span>
                             </div>
-                         </figure>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+            <!-- Smart Wallet -->
+            <section id="wallet" class="wallet">
+                <div class="container">
+                    <div class="wallet__inner">
+                        <!-- wallet-media -->
+                        <div class="wallet__media" data-aos="fade-up-right">
+                            <figure class="wallet__images">
+                                <img
+                                    src="./assets/img/person2.png"
+                                    alt="wallet"
+                                    class="wallet__img-01"
+                                />
+                            </figure>
+
+                            <figure>
+                                <img
+                                    src="./assets/img/transfer-icon.svg"
+                                    alt="card"
+                                    class="wallet__card"
+                                />
+                            </figure>
+                            <div class="wallet__payment-method">
+                                <p class="wallet__method-desc">
+                                    Choose payment method:
+                                </p>
+                                <div class="wallet__method-list">
+                                    <div class="wallet__method__items">
+                                        <figure>
+                                            <img
+                                                class="wallet__method-img"
+                                                src="./assets/icons/payment-method-1.svg"
+                                                alt="master"
+                                            />
+                                        </figure>
+                                    </div>
+
+                                    <div class="wallet__method__items">
+                                        <figure>
+                                            <img
+                                                class="wallet__method-img"
+                                                src="./assets/icons/payment-method-2.svg"
+                                                alt="maestro"
+                                            />
+                                        </figure>
+                                    </div>
+
+                                    <div class="wallet__method__items">
+                                        <figure>
+                                            <img
+                                                class="wallet__method-img"
+                                                src="./assets/icons/payment-method-3.svg"
+                                                alt="card-xanh"
+                                            />
+                                        </figure>
+                                    </div>
+
+                                    <div class="wallet__method__items">
+                                        <figure>
+                                            <img
+                                                class="wallet__method-img"
+                                                src="./assets/icons/payment-method-4.svg"
+                                                alt="visa"
+                                            />
+                                        </figure>
+                                    </div>
+
+                                    <div class="wallet__method__items">
+                                        <figure>
+                                            <img
+                                                class="wallet__method-img"
+                                                src="./assets/icons/payment-method-5.svg"
+                                                alt="paypal"
+                                            />
+                                        </figure>
+                                    </div>
+
+                                    <div class="wallet__method__items">
+                                        <figure>
+                                            <img
+                                                class="wallet__method-img"
+                                                src="./assets/icons/payment-method-6.svg"
+                                                alt="paypal"
+                                            />
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- wallet-content -->
+                        <section
+                            class="wallet__content"
+                            data-aos="fade-up-left"
+                        >
+                            <div>
+                                <p class="section-desc-title">
+                                    Digital Smart Wallet
+                                </p>
+                                <h2 class="section-heading wallet__heading">
+                                    Transfer and Deposite Your Money Anytime
+                                </h2>
+                                <p
+                                    class="section-desc-level-1 wallet__desc-level-1"
+                                >
+                                    We bring together eveything that’s required
+                                    to build websites and apps that accept
+                                    payments and send payouts globally. We are
+                                    the best platform.
+                                </p>
+                                <ul class="wallet__list">
+                                    <li class="wallet__items">
+                                        <a href="#!" class="wallet__items__link"
+                                            >Powerfull App</a
+                                        >
+                                    </li>
+                                    <li class="wallet__items">
+                                        <a href="#!" class="wallet__items__link"
+                                            >Transparency And Speed</a
+                                        >
+                                    </li>
+                                    <li class="wallet__items">
+                                        <a href="#!" class="wallet__items__link"
+                                            >Multiple Use Capabilities</a
+                                        >
+                                    </li>
+                                </ul>
+                                <a href="#!" class="btn wallet__btn"
+                                    >Get Started</a
+                                >
+                            </div>
+                        </section>
                     </div>
                 </div>
             </section>
         </main>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
     </body>
 </html>
