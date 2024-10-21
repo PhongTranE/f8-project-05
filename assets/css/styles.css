@@ -1068,3 +1068,69 @@ li.wallet__items {
 .blog__link:hover {
     color: #7264d6;
 }
+
+/* App */
+.app {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.app__inner {
+    position: relative;
+    border-radius: 24px;
+    background: #7264d6;
+    padding: 100px 0;
+}
+
+.app__header-title {
+    display: inline-block;
+    color: #fff;
+}
+
+.app__header-title::before {
+    background-color: #fff;
+}
+
+.app__heading {
+    margin-top: 12px;
+    color: #fff;
+}
+
+.app__desc {
+    display: inline-block;
+    margin-top: 18px;
+    width: 480px;
+    color: #fff;
+}
+
+.app__link {
+    margin-top: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.star {
+    position: absolute;
+}
+
+.star_1 {
+    top: 49px;
+    left: 112px;
+}
+
+.star_2 {
+    top: 49px;
+    right: 112px;
+}
+
+.star_3 {
+    bottom: 49px;
+    left: 166px;
+}
+
+.star_4 {
+    bottom: 49px;
+    right: 166px;
+}
